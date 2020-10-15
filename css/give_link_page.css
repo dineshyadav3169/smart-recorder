@@ -1,0 +1,35 @@
+
+
+
+#url-enter {
+    width: 75%;
+    padding: 12px 20px;
+    font-size: 30px;
+    color: white;
+    box-shadow: 6px 6px 20px black;
+    box-sizing: border-box;
+    border-radius: 30px;
+    border-color: aqua;
+}
+	
+#submit {
+    background-color:grey;
+    ; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    box-shadow: 0px 0px 20px black;
+    box-sizing: border-box;
+    border-radius: 30px;
+    border-color: aqua;
+}
+
+#back-button {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
