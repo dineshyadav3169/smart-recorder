@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+
+	<title>Smart Recorder | Upload audio</title>
+	<link rel='stylesheet' href='css/main.css'>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0">
+	<link rel='stylesheet' href='css/ui_style.css'>
+	<link rel='stylesheet' href='css/upload_page.css.css'>
+
+
+</head>
+<body class="page page-home preload">
+
+<header class="header-main">
+    <nav>
+      <a href="index.html" class="logo" rel="home"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24"><path d="M6.648 7.762c-.077-.11-.106-.245-.083-.376.024-.132.1-.248.21-.323l1.164-.8c1.536-1.076 3.406-1.486 5.25-1.16 3.82.673 6.373 4.32 5.704 8.113-.668 3.793-4.316 6.347-8.134 5.674-1.845-.326-3.462-1.35-4.485-2.813l-3.11-4.445c-.16-.23-.45-.33-.717-.245-.267.084-.45.33-.45.61C2 11.998 2 12 2 12c0 5.523 4.477 10 10 10s10-4.477 10-10S17.523 2 12 2C8.94 2 6.202 3.374 4.368 5.538c-.735.86-.794 2.11-.146 3.036 1.475 2.136 4.138 5.942 4.138 5.942.675.965 1.685 1.605 2.852 1.81 2.396.424 4.684-1.168 5.107-3.564.42-2.396-1.185-4.674-3.58-5.097-1.167-.205-2.335.05-3.36.77-.84.585-1.994.38-2.58-.458l-.152-.215z" fill="currentColor"/></svg><span>Recorder</span></a>
+      <div class="nav-toggle"></div>
+      <ul class="inline">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#API">API</a></li>
+        <li><a href="#Something">Something</a></li>
+      </ul>
+    </nav>
+  </header>
+
+<main>
+
+	<section class="bg-primary center dark padding" style="padding-top: 1rem;padding-bottom: 0rem;">
+	<h2>Please upload your audio file</h2>
+	</section>
+    <section class="bg-primary center dark padding" style="padding-top: 0rem;padding-bottom: 0rem;">
+      <div class="margin-bottom margin-top max-width-m">
+		    <input
+      type="file"
+      name="file"
+      id="file-upload"
+      accept="audio/*"
+      aria-label="File browser example"
+    />
+      </div>
+    </section>
+	
+</section>
+
+
+    <section class="bg-dark center-tablet dark padding">
+      <div class="row max-width-l">
+        <div class="col-one-third">
+          <i class="feature-icons material-icons bg-gradient-indigo dark">brightness_3</i>
+          <h5>x2 Modules</h5>
+          <p class="lead">something.... something.... something.... something.... something.... </p>
+        </div>
+        <div class="col-one-third">
+          <i class="feature-icons material-icons bg-gradient-green dark">account_circle</i>
+          <h5>Onboarding Screens</h5>
+          <p class="lead">something.... something.... something.... something.... something.... </p>
+        </div>
+        <div class="col-one-third">
+          <i class="feature-icons material-icons bg-gradient-pink dark">tune</i>
+          <h5>Unlimited Possibilities</h5>
+          <p class="lead">something.... something.... something.... something.... something.... </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-primary center dark padding">
+      <div class="margin-bottom margin-top max-width-m">
+        <p class="lead">We do not Upload/Store any document from this website</p>
+      </div>
+    </section>
+
+
+<!---
+<input id="imageinput" type="file" name="image" onchange="readUrl(this)">
+-->
+
+
+
+</main>
+
+
+  <footer class="footer-main bg-light">
+    <div class="padding">
+      <div class="row max-width-l">
+
+
+
+        <div class="col-two-fifths">
+          <div class="max-width-s">
+            <h6>Join The Newsletter</h6>
+            <p>Get the latest news and resources right into your inbox every monday.</p>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+
+
+
+  
+
+<script>
+// Remove preload class once page is fully loaded
+
+window.addEventListener('load', function() {
+  Array.from(document.getElementsByTagName('body')).forEach(function(el) {
+    el.classList.remove('preload');
+  });
+});
+
+// Add class to navigation when scrolling down
+
+document.addEventListener('scroll', function() {
+  const header = document.querySelector('.header-main');
+  if (window.scrollY >= 20) {
+    header.classList.add('fade-in');
+  } else {
+    header.classList.remove('fade-in');
+  }
+});
+
+// Add class when mobile navigation icon is clicked
+
+Array.from(document.getElementsByClassName('nav-toggle')).forEach(function(el) {
+  el.addEventListener('click', function() {
+    Array.from(document.getElementsByTagName('body')).forEach(function(el) {
+      el.classList.toggle('no-scroll');
+    });
+    Array.from(document.getElementsByClassName('header-main')).forEach(function(el) {
+      el.classList.toggle('active');
+    });
+  });
+});
+
+// Add class when mobile sidebar navigation is clicked
+
+Array.from(document.getElementsByClassName('sidebar-header')).forEach(function(el) {
+  el.addEventListener('click', function() {
+    Array.from(document.getElementsByClassName('sidebar')).forEach(function(el) {
+      el.classList.toggle('active');
+    });
+  });
+});
+
+// Add class when switching between monthly and yearly pricing
+
+Array.from(document.getElementsByClassName('switch-button')).forEach(function(el) {
+  el.addEventListener('click', function() {
+    Array.from(document.getElementsByClassName('pricing-monthly')).forEach(function(el) {
+      el.classList.toggle('inactive');
+    });
+    Array.from(document.getElementsByClassName('pricing-yearly')).forEach(function(el) {
+      el.classList.toggle('active');
+    });
+  });
+});
+</script>
+
+</body>
+</html>
