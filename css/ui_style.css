@@ -1,0 +1,36 @@
+
+/* Scrollbar styles */
+@media screen and (max-width: 3000px ){
+::-webkit-scrollbar {
+width: 12px;
+height: 12px;
+}
+}
+@media screen and (max-width: 566px ){
+::-webkit-scrollbar {
+width: 0px;
+height: 12px;
+}
+}
+::-webkit-scrollbar-track {
+border: 3px solid #34D18F;
+border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+background: #2f55d4;  
+border-radius: 10px;
+border: 3px solid #34D18F;
+}
+
+::-webkit-scrollbar-thumb:hover {
+background: #2f55d4;  
+border: 3px solid #2f55d4;
+}
+
+* {
+  box-sizing: border-box;
+}
+body {
+  background-color: #FFE53B;
+  background: #d6dfff;
+}
